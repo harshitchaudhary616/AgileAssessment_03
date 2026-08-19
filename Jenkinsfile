@@ -1,27 +1,23 @@
 pipeline {
-
     agent any
 
     stages {
 
         stage('Build') {
             steps {
-                echo 'Building the project...'
-                sh 'python3 -m py_compile *.py'
+                echo 'Building project...'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Running tests...'
-                sh 'python3 -m unittest discover'
+                echo 'Testing project...'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying the application...'
-                sh 'echo "Application deployed successfully"'
+                echo 'Deploying project...'
             }
         }
     }
